@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#160805"><meta name="description" content="Daily Bhajan Lives AI — सनातन धर्म और हिंदू परंपराओं से जुड़े सवालों के जवाब।">
+<title>Daily Bhajan Lives AI</title>
+<style>
+:root{color-scheme:dark;--bg:#100604;--panel:#1b0b08;--panel2:#24100b;--gold:#f5bd55;--saffron:#df7b22;--muted:#c7a98b;--line:#54301c}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% -15%,#5b260f 0,transparent 48%),var(--bg);color:#fff6e8;font-family:system-ui,-apple-system,"Noto Sans Devanagari",sans-serif;display:flex;flex-direction:column}
+header{height:72px;border-bottom:1px solid #6d3b1d88;display:flex;align-items:center;justify-content:space-between;padding:0 max(18px,calc((100vw - 920px)/2));background:#130805d9;backdrop-filter:blur(14px)}
+.brand{display:flex;align-items:center;gap:12px;font-weight:750;letter-spacing:.2px}.logo{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#ffd77d,#a64c12);color:#351305;font-size:22px;box-shadow:0 0 24px #e58b3040}.brand small{display:block;color:var(--muted);font-size:11px;font-weight:500;letter-spacing:1.6px;text-transform:uppercase}
+.pill{font-size:12px;color:#f6cb82;border:1px solid #80502b;border-radius:99px;padding:7px 11px}
+main{width:min(900px,100%);margin:0 auto;flex:1;display:flex;flex-direction:column;padding:34px 18px 20px}
+.intro{text-align:center;margin:12px auto 26px;max-width:660px}.om{color:var(--gold);font-size:35px;margin-bottom:8px;text-shadow:0 0 24px #ffb84d66}.intro h1{font-size:clamp(25px,5vw,39px);margin:0 0 10px;line-height:1.25}.intro h1 span{color:var(--gold)}.intro p{margin:0;color:var(--muted);font-size:14px;line-height:1.8}
+.suggestions{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin:0 auto 24px;max-width:740px}.suggestions button{border:1px solid #754321;background:#241109;color:#f6d8ad;border-radius:99px;padding:9px 13px;font-size:12px;cursor:pointer}.suggestions button:hover{border-color:var(--gold);background:#35180c}
+.chat{flex:1;min-height:210px;max-height:calc(100vh - 390px);overflow:auto;padding:8px 4px 18px;display:flex;flex-direction:column;gap:16px;scroll-behavior:smooth}.msg{display:flex;gap:10px;align-items:flex-start;max-width:88%}.msg.user{align-self:flex-end;flex-direction:row-reverse}.avatar{flex:0 0 32px;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:#4b210f;color:#ffd17a;border:1px solid #89522a;font-size:14px}.bubble{padding:12px 15px;border:1px solid #58321e;background:#1c0d09;border-radius:4px 16px 16px 16px;line-height:1.8;font-size:14px;white-space:pre-wrap;overflow-wrap:anywhere}.user .bubble{background:#42200e;border-color:#89512a;border-radius:16px 4px 16px 16px}.typing{color:var(--muted);font-size:13px}
+.composer-wrap{position:sticky;bottom:0;padding:12px 0 5px;background:linear-gradient(transparent,var(--bg) 18%)}.composer{display:flex;gap:10px;align-items:flex-end;padding:9px;border:1px solid #87512a;background:#1b0b08;border-radius:18px;box-shadow:0 12px 40px #0006}.composer textarea{flex:1;resize:none;max-height:130px;min-height:42px;border:0;outline:0;background:transparent;color:#fff5e6;font:inherit;font-size:14px;padding:10px 8px}.composer textarea::placeholder{color:#a98a6e}.send{height:42px;min-width:46px;border:0;border-radius:12px;background:linear-gradient(135deg,#ffd77e,#d97719);color:#301304;font-size:20px;font-weight:800;cursor:pointer}.send:disabled{opacity:.45;cursor:wait}.note{text-align:center;color:#947960;font-size:11px;margin:10px 0 0;line-height:1.6}
+footer{text-align:center;color:#8d7059;font-size:11px;padding:14px;border-top:1px solid #422416}
+@media(max-width:600px){header{height:64px}.pill{font-size:10px;padding:6px 8px}main{padding:24px 13px 12px}.intro{margin:10px auto 20px}.chat{max-height:none;min-height:190px}.msg{max-width:96%}.bubble{font-size:13px}.suggestions{gap:7px}.suggestions button{font-size:11px;padding:8px 10px}}
+</style>
+</head>
+<body>
+<header><div class="brand"><div class="logo">ॐ</div><div>Daily Bhajan Lives<small>सनातन ज्ञान • AI सहायक</small></div></div><div class="pill">🪔 केवल हिंदू धर्म</div></header>
+<main>
+<section class="intro"><div class="om">॥ ॐ ॥</div><h1>सनातन ज्ञान का <span>साथी</span></h1><p>हिंदू धर्म, देवी-देवताओं, पूजा-पाठ, व्रत, त्योहार, शास्त्रों और परंपराओं से जुड़े अपने सवाल पूछें। सरल हिंदी में उत्तर पाएँ।</p></section>
+<div class="suggestions" id="suggestions">
+<button data-q="आज कौन-सा वार और हिंदू पंचांग की तिथि है?">आज की तिथि क्या है?</button>
+<button data-q="हनुमान जी की पूजा मंगलवार को क्यों की जाती है?">मंगलवार का महत्व</button>
+<button data-q="महाशिवरात्रि क्यों मनाई जाती है?">महाशिवरात्रि क्यों?</button>
+<button data-q="भगवद्गीता का मुख्य संदेश क्या है?">गीता का संदेश</button>
+</div>
+<section class="chat" id="chat" aria-live="polite"><div class="msg"><div class="avatar">ॐ</div><div class="bubble">नमस्ते 🙏 मैं Daily Bhajan Lives AI हूँ। आप हिंदू धर्म और सनातन परंपराओं से जुड़ा कोई भी सवाल पूछ सकते हैं। मैं सरल हिंदी में समझाने की कोशिश करूँगा।</div></div></section>
+<div class="composer-wrap"><form class="composer" id="form"><textarea id="question" rows="1" maxlength="1500" placeholder="अपना सनातन धर्म से जुड़ा सवाल लिखें..." aria-label="अपना सवाल लिखें"></textarea><button class="send" id="send" aria-label="भेजें">➤</button></form><p class="note">यह AI धार्मिक मान्यताओं और परंपराओं की जानकारी देता है। अलग-अलग ग्रंथों और क्षेत्रों में मतभेद हो सकते हैं।</p></div>
+</main>
+<footer>© <span id="year"></span> Daily Bhajan Lives AI</footer>
+<script>
+const chat=document.getElementById('chat'),form=document.getElementById('form'),input=document.getElementById('question'),send=document.getElementById('send');let history=[];
+document.getElementById('year').textContent=new Date().getFullYear();
+function add(text,who){const row=document.createElement('div');row.className='msg '+(who==='user'?'user':'');const av=document.createElement('div');av.className='avatar';av.textContent=who==='user'?'आप':'ॐ';const b=document.createElement('div');b.className='bubble';b.textContent=text;row.append(av,b);chat.append(row);chat.scrollTop=chat.scrollHeight;return b}
+async function ask(q){q=q.trim();if(!q||send.disabled)return;add(q,'user');input.value='';input.style.height='auto';history.push({role:'user',text:q});send.disabled=true;const wait=add('विचार कर रहा हूँ…','ai');try{const res=await fetch('/.netlify/functions/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:history.slice(-12)})});const data=await res.json();if(!res.ok)throw new Error(data.error||'अभी उत्तर नहीं मिल पाया।');const answer=data.answer||'क्षमा करें, उत्तर उपलब्ध नहीं है।';wait.textContent=answer;history.push({role:'model',text:answer})}catch(e){wait.textContent='अभी AI सेवा से जुड़ने में समस्या है। कृपया थोड़ी देर बाद फिर कोशिश करें।';}finally{send.disabled=false;input.focus();chat.scrollTop=chat.scrollHeight}}
+form.addEventListener('submit',e=>{e.preventDefault();ask(input.value)});input.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();form.requestSubmit()}});input.addEventListener('input',()=>{input.style.height='auto';input.style.height=Math.min(input.scrollHeight,130)+'px'});document.getElementById('suggestions').addEventListener('click',e=>{const b=e.target.closest('button');if(b)ask(b.dataset.q)});
+</script>
+</body></html>
