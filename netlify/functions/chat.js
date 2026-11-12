@@ -1,6 +1,6 @@
 // Netlify Function: securely proxy requests to Gemini.
 // Set GEMINI_API_KEY in Netlify Site configuration > Environment variables.
-// Optional: set GEMINI_MODEL (defaults to gemini-2.5-flash).
+// Optional: set GEMINI_MODEL (defaults to gemini-3.8-flash).
 
 exports.handler = async (event) => {
   const headers = {
@@ -53,7 +53,7 @@ exports.handler = async (event) => {
   ].join(" ");
 
   try {
-    const model = process.env.GEMINI_MODEL || "gemini-2.5-flash";
+    const model = process.env.GEMINI_MODEL || "gemini-3.8-flash";
     const url = "https://generativelanguage.googleapis.com/v1beta/models/" +
       encodeURIComponent(model) + ":generateContent";
 
